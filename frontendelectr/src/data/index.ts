@@ -1,6 +1,6 @@
 export default [
     {
-      title: 'Aprender nunca foi tão fácil, aprenda a economizar seu dinheiro',
+      title: '',
       description:
         'Tenho certeza que em algum momento você já parou e pensou "Porque a conta de energia veio tão alta?". Já se perguntou bastante sem encontrar uma solução fácil de como calculá-la você mesmo? Então vem dá uma conferida no Electr+, faça já sua simulação',
     },

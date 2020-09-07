@@ -6,13 +6,14 @@ export const Container = styled.div`
     flex-direction: column;
     height: 100%;
 
-    background: var(--color-primary);
+    background: #fff;
 `;
 
 export const Navigation = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 
     padding: 16px 32px;
     min-height: 61px;
@@ -38,10 +39,8 @@ export const Navigation = styled.div`
         }
 
     @media (min-width: 1024px) {
-        justify-content: flex-end;
-        > h1 {
-            display: none;
-        }
+        justify-content: space-between;
+        
     }
 
 `;

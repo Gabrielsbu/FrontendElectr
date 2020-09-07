@@ -10,8 +10,6 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
 
-    
-
     @media ( min-width: 1024px){
         width: calc(100% / 3);
         box-shadow: -7px 0 5px -6px rgba(0, 0, 0, 0.075);
@@ -29,12 +27,12 @@ export const Container = styled.div`
         transform: translateX(0);
     }
 
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
         &.scrollOpen {
             transform: translateX(0);
         }
         &.scrollOpen .action--close {
             display: none;
         }
-    }
+    } */
 `;

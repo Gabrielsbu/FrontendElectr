@@ -8,37 +8,9 @@ export const Container = styled.div`
     --heading-font-size: 32px;
     --content-width: 100%;
 
-    &.white {
-        
-        --bg-color: var(--color-primary);
-        --text-color: var(--color-tertiary);
-        --logo-color: var(--color-secondary);
-    } 
-
-    &.yellow{
-        --bg-color: var(--color-secondary);
-        --text-color: var(--color-quaternary);
-        --logo-color: var(--color-blue);
-    }
-    
-    &.black{
-        --bg-color: var(--color-quaternary);
-        --text-color: var(--color-primary);
-        --logo-color: var(--color-blue);
-    }
-
-    &:first-child {
-        --padding-top: 130px;
-        --heading-font-size:51px;
-
-        @media (min-width: 1024px) {
-            --content-width: 50%;
-            --heading-font-size:71px;
-        }
-    }
-
-    background: var(--bg-color);
+    background: var(--color-primary);
     position: relative;
+    
 `;  
 
 export const HeaderWrapper = styled.div `
@@ -47,19 +19,16 @@ export const HeaderWrapper = styled.div `
     left: 0;
     bottom:0;
     right: 0;
-    clip: rect(auto, auto, auto, auto);
 `
 export const Header = styled.header `
 
     z-index: 3;
-    background: var(--bg-color);
-
+    background: var(--color-secondary);
     display: flex;
     justify-content: space-between;
 
-    max-width: 1440px;
     margin: 0 auto;
-    padding: 16px 32px;
+    padding: 35px 32px;
 
     > h1 {
         
@@ -67,9 +36,11 @@ export const Header = styled.header `
             color: var(--text-color);
             margin-left: 10px;
             font-size: 45px;
+            display: none;
             
         }
     }
+
     > button {
         color: var(--text-color);
         background: none;
@@ -83,10 +54,19 @@ export const Header = styled.header `
         }
     }
 
-    position: fixed;
+   
     top: 0;
     right: 0;
     left: 0;
+    position: fixed;
+    
+    @media (min-width: 720px) {
+        > h1{
+            > span {
+                display: unset;
+            }
+        }
+    }
 `
 
 export const Bars = styled(FaBars)`
@@ -95,11 +75,12 @@ export const Bars = styled(FaBars)`
 `
 export const Content = styled.div`
     z-index: 2;
-    position: relative;
-    max-width: 1440px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     > h2 {
+        margin-top: 5rem;
         font-size: var(--heading-font-size);
         color: var(--logo-color);
         max-width: var(--content-width);
@@ -111,14 +92,31 @@ export const Content = styled.div`
         font-size: 18px;
         color: var(--text-secondary);
         max-width: var(--content-width);
+    }
+
+    > button {
+        margin-top: 70px;
+        padding: 13px 18px;
+        font-size: 16px;
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        border: none;
+        border-radius: 25px;
+
+        cursor: pointer;
+        &:hover{
+            opacity: 0.87;
+        }
     } 
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         > h2, p {
-            width: 50%;
+            width: 55%;
         }
 
-     
+        > button {
+            max-width: 250px;
+        }
     }
 
     padding: var(--padding-top) 32px var(--padding-bottom);

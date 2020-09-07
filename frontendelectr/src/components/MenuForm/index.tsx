@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Logo from '../../assets/logo.png';
+
 import { Container, Navigation, Form } from './styles';
 
 const MenuForm: React.FC = () => {
@@ -12,11 +14,8 @@ const MenuForm: React.FC = () => {
     return (
         <Container>
             <Navigation>
-                <h1>
-                    
-                    <span>Dropbox</span>
-                </h1>
-
+                <img src={Logo} alt="logo-menu"/>
+                <h1>Cômodos</h1>
                 <button className="action--close" onClick={handleToggle}>✕</button>
             </Navigation>
 
