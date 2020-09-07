@@ -1,14 +1,40 @@
 import React from 'react';
 
 import imgBody from '../../assets/fotomain.png';
+import fotoMain from '../../assets/fotomain.png';
 
-import { Container, Content, BodyText, ImgBody } from './styles';
+import { Container, ContainerTop, ContentMid, BodyText, ImgBody, ContentTop, TextTopMenu, ImgTopMenu, SimulatorButton } from './styles';
 
 const Body: React.FC = () => {
-  return (
-      <Container>
-        <Content>
 
+  function handleToggle() {
+    if(window.toggleActiveMenu) {
+        window.toggleActiveMenu();
+    }
+  }
+
+  return (
+
+    <Container>
+
+        <ContainerTop>
+          <ContentTop>
+                <TextTopMenu>
+                    <h2> Aprender nunca foi tão fácil, aprenda a economizar seu dinheiro </h2>
+                    <p> Tenho certeza que em algum momento você já parou e pensou "Porque a conta de energia veio tão alta?". Já se perguntou bastante sem encontrar uma solução fácil de como calculá-la você mesmo? Então vem dá uma conferida no Electr+, faça já sua simulação </p>
+                    <img src={fotoMain} alt="img-top-menu"/>
+                    <SimulatorButton onClick={handleToggle} outlined>Começar simulação</SimulatorButton>
+                    
+                </TextTopMenu>
+
+                <ImgTopMenu>
+                    <img src={fotoMain} alt="img-top-menu"/>
+                </ImgTopMenu>
+                
+          </ContentTop>  
+        </ContainerTop>
+
+        <ContentMid>
             <BodyText>
 
                 <h2>Saiba mais sobre sua CONTA DE ENERGIA</h2>
@@ -22,13 +48,12 @@ const Body: React.FC = () => {
                 
             </BodyText>
 
-            
-
             <ImgBody>
                 <img src={imgBody} alt="foto-body"/>
             </ImgBody>
 
-        </Content>
+        </ContentMid>
+
       </Container>
   );
 }

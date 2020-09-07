@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Main from './pages/Main';
+import QuemSomos from './pages/QuemSomos';
+import Electr from './pages/Electr';
+import Contato from './pages/Contato';
 import Banheiro from './pages/Banheiro';
 import Area from './pages/Area';
 import Cozinha from './pages/Cozinha';
@@ -22,6 +25,9 @@ function Routes() {
             <Route path="/garagem" component={Garagem}></Route>
             <Route path="/quarto" component={Quarto}></Route>
             <Route path="/sala" component={Sala}></Route>
+            <Route path="/faq" component={QuemSomos}></Route>
+            <Route path="/eletrc" component={Electr}></Route>
+            <Route path="/contato" component={Contato}></Route>
             <Route path="/relatoriogeral" component={RelatorioGeral}></Route>
         </BrowserRouter>
     );

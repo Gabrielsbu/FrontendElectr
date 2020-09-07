@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo  from '../../assets/logo.png';
 
@@ -16,11 +17,13 @@ const HeaderPage: React.FC = () => {
       <Container>
           <HeaderWrapper>
             <Header>
-                <a href="#">Início</a>
-                <a href="#">Electr+</a>
+                <Link to="/">Início</Link>
+                <Link to="electr">Electr+</Link>
+
                 <h1><img src={Logo} alt="logo"/></h1>
-                <a href="#">Quem somos?</a>
-                <a href="#">Contato</a>
+
+                <Link to="faq">Quem somos?</Link>
+                <Link to="contato">Contato</Link>
 
                 <button onClick={handleToggle}><Bars /></button>
             </Header>
