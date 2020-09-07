@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
+import Button from '../../components/Button';
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
-
     background: #fff;
 `;
 
@@ -15,7 +15,7 @@ export const Navigation = styled.div`
     justify-content: space-between;
     
 
-    padding: 16px 32px;
+    padding: 40px 35px;
     min-height: 61px;
 
     > h1 {
@@ -33,7 +33,7 @@ export const Navigation = styled.div`
         background: none;
         border: none;
         font-weight: bold;
-        font-size: 17px;
+        font-size: 35px;
         outline: 0;
         cursor: pointer;
         }
@@ -75,24 +75,24 @@ export const Form = styled.form`
         margin-top: 18px;
     }
 
-    > button {
-        margin-top: 18px;
-
-        padding: 13px 18px;
-        font-size: 16px;
-        background-color: var(--color-blue);
-        color: var(--color-tertiary);
-        border: none;
-
-        cursor: pointer;
-        &:hover{
-            opacity: 0.87;
-        }
-    }
-
     > .terms {
         font-size: 12px;
         opacity: 0.6;
         margin-top: 4px;
     }
 `;
+
+export const SendButton = styled(Button)`
+    
+        margin-top: 25px;
+        padding: 13px 18px;
+        font-size: 16px;
+        background-color: var(--color-quaternary);
+        color: var(--color-primary);
+        border: none;
+
+        cursor: pointer;
+        &:hover{
+            opacity: 0.87;
+        }
+`

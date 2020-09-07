@@ -41,8 +41,12 @@ const SideMenu: React.FC = ({children}) => {
 
   window.toggleActiveMenu = toggleActiveMenu;
 
-  return <Container className= {className} >{children}</Container>
+  return (
+    <Container className= {className} >
+      {children}
+    </Container>
 
+    );
 }
 
 export default SideMenu;

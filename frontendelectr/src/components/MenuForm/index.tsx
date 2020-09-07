@@ -2,7 +2,7 @@ import React from 'react';
 
 import Logo from '../../assets/logo.png';
 
-import { Container, Navigation, Form } from './styles';
+import { Container, Navigation, Form, SendButton } from './styles';
 
 const MenuForm: React.FC = () => {
     function handleToggle() {
@@ -15,7 +15,6 @@ const MenuForm: React.FC = () => {
         <Container>
             <Navigation>
                 <img src={Logo} alt="logo-menu"/>
-                <h1>Cômodos</h1>
                 <button className="action--close" onClick={handleToggle}>✕</button>
             </Navigation>
 
@@ -27,7 +26,7 @@ const MenuForm: React.FC = () => {
                 <input type="email" placeholder="Email"/>
                 <input type="password" placeholder="Password"/>
 
-                <button>Prosseguir</button>
+                <SendButton     >Enviar Cadastro</SendButton>
                 <span className="terms">
                     Esta página está sujeita a Política de privacidade e aos Termos de serviço.
                 </span>
